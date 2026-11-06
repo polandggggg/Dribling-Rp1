@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dribling RP | Official</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#090b10;color:white;font-family:Arial,sans-serif}
+header{background:#10131b;padding:18px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #292e3a;position:sticky;top:0}
+.logo{font-size:22px;font-weight:900;letter-spacing:1px}
+.logo span,h1 span{color:#e34855}
+button{cursor:pointer}
+.lang{background:#242936;border:1px solid #444;color:white;padding:9px 13px;border-radius:7px}
+nav{background:#10131b;text-align:center;padding:13px}
+nav a{color:#bbb;text-decoration:none;margin:0 12px;font-size:14px}
+.hero{text-align:center;padding:100px 20px;background:radial-gradient(ellipse at top,#54212b,#17121b 50%,#090b10 90%)}
+.hero h1{font-size:clamp(42px,9vw,70px);margin:20px 0}
+.hero p{color:#bbb;max-width:550px;margin:auto;line-height:1.7}
+.btn{display:inline-block;background:#e34855;color:white;padding:13px 24px;border:0;border-radius:7px;margin-top:25px;text-decoration:none;font-weight:bold}
+section{padding:55px 20px;max-width:1000px;margin:auto}
+h2{font-size:27px}
+.line{width:40px;height:3px;background:#e34855;margin:15px 0 25px}
+.muted{color:#a5aab6;line-height:1.7}
+.card{background:#141923;border:1px solid #2c3240;padding:20px;border-radius:10px;margin:15px 0}
+.tag{color:#ff9da4;background:#47212a;padding:5px 9px;border-radius:5px;font-size:11px}
+.date{color:#858c9b;font-size:11px;margin-top:15px}
+.about{background:#10131b;border-block:1px solid #292e3a}
+.about section{padding-top:55px;padding-bottom:55px}
+.admin{min-height:100vh;background:linear-gradient(#090b10,#17121b);padding-top:120px;padding-bottom:120px}
+.adminbox{max-width:470px;margin:auto;background:#141923;border:1px solid #353b48;border-radius:12px;padding:24px}
+input,textarea{width:100%;padding:12px;background:#090d15;color:white;border:1px solid #414958;border-radius:7px;margin:8px 0;font-size:15px}
+textarea{min-height:110px;resize:vertical}
+label{display:block;margin-top:15px;font-size:13px;color:#ccc}
+.wide{width:100%;padding:13px;background:#e34855;color:white;border:0;border-radius:7px;font-weight:bold;margin-top:15px}
+.notice{color:#999;font-size:12px;line-height:1.6}
+footer{text-align:center;padding:25px;border-top:1px solid #292e3a;color:#888;font-size:12px}
+@media(max-width:500px){nav a{margin:0 7px;font-size:12px}.hero{padding:75px 15px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">DRIBLING <span>RP</span></div>
+<button class="lang" onclick="changeLang()">RU / EN</button>
+</header>
+
+<nav>
+<a href="#home" data-ru="Главная" data-en="Home">Главная</a>
+<a href="#news" data-ru="Новости" data-en="News">Новости</a>
+<a href="#about" data-ru="О проекте" data-en="About">О проекте</a>
+</nav>
+
+<div class="hero" id="home">
+<div style="color:#f07880;letter-spacing:3px;font-size:11px">YOUR STORY STARTS HERE</div>
+<h1>DRIBLING <span>RP</span></h1>
+<p data-ru="Добро пожаловать в Dribling RP! Создай свою историю и стань частью нашего мира." data-en="Welcome to Dribling RP! Create your own story and become part of our world.">Добро пожаловать в Dribling RP! Создай свою историю и стань частью нашего мира.</p>
+<a class="btn" href="#news" data-ru="Последние новости ↓" data-en="Latest news ↓">Последние новости ↓</a>
+</div>
+
+<section id="news">
+<div style="color:#f07880;letter-spacing:2px;font-size:11px">LATEST UPDATES</div>
+<h2 data-ru="Новости проекта" data-en="Project News">Новости проекта</h2>
+<div class="line"></div>
+
+<div id="newsList">
+<div class="card">
+<span class="tag" data-ru="ОБЪЯВЛЕНИЕ" data-en="ANNOUNCEMENT">ОБЪЯВЛЕНИЕ</span>
+<h3 data-ru="Скоро открытие Dribling RP" data-en="Dribling RP is coming soon">Скоро открытие Dribling RP</h3>
+<p class="muted" data-ru="Следите за новостями проекта. Информация о запуске появится здесь." data-en="Stay tuned for project updates. Launch information will appear here.">Следите за новостями проекта. Информация о запуске появится здесь.</p>
+<div class="date">OFFICIAL NEWS</div>
+</div>
+
+<div class="card">
+<span class="tag" data-ru="РАЗРАБОТКА" data-en="DEVELOPMENT">РАЗРАБОТКА</span>
+<h3 data-ru="Подготовка проекта" data-en="Project preparation">Подготовка проекта</h3>
+<p class="muted" data-ru="Мы готовим проект к запуску. Новые подробности появятся позднее." data-en="We are preparing the project for launch. More details will follow.">Мы готовим проект к запуску. Новые подробности появятся позднее.</p>
+<div class="date">DRIBLING RP</div>
+</div>
+</div>
+</section>
+
+<div class="about" id="about">
+<section>
+<div style="color:#f07880;letter-spacing:2px;font-size:11px">ABOUT US</div>
+<h2 data-ru="О Dribling RP" data-en="About Dribling RP">О Dribling RP</h2>
+<div class="line"></div>
+<p class="muted" data-ru="Dribling RP — ролевой проект, где каждый игрок сможет создать свою историю, найти своё место в игровом мире и стать частью сообщества." data-en="Dribling RP is a roleplay project where every player can create their own story, find their place in the game world and become part of a community.">Dribling RP — ролевой проект, где каждый игрок сможет создать свою историю, найти своё место в игровом мире и стать частью сообщества.</p>
+</section>
+</div>
+
+<!-- ADMINISTRATOR AREA AT THE BOTTOM -->
+<div class="admin" id="administrator">
+<div class="adminbox" id="loginBox">
+<div style="color:#f07880;font-size:11px;letter-spacing:2px">ADMINISTRATOR ACCESS</div>
+<h2 data-ru="Войти в систему администратора" data-en="Administrator Login">Войти в систему администратора</h2>
+<p class="muted" data-ru="Доступ только для уполномоченного администратора." data-en="Authorized administrator access only.">Доступ только для уполномоченного администратора.</p>
+<form id="loginForm">
+<label data-ru="Код доступа" data-en="Access code">Код доступа</label>
+<input type="password" id="accessCode" placeholder="••••••••" required>
+<button class="wide" type="submit" data-ru="Войти" data-en="Sign in">Войти</button>
+</form>
+<p class="notice" id="loginMessage"></p>
+</div>
+
+<div class="adminbox" id="dashboard" hidden>
+<div style="color:#f07880;font-size:11px">DRIBLING RP · ADMIN</div>
+<h2 data-ru="Управление новостями" data-en="News Management">Управление новостями</h2>
+
+<label>Заголовок (RU)</label>
+<input id="titleRU" maxlength="100">
+
+<label>Текст новости (RU)</label>
+<textarea id="bodyRU" maxlength="3000"></textarea>
+
+<label>News title (EN)</label>
+<input id="titleEN" maxlength="100">
+
+<label>News text (EN)</label>
+<textarea id="bodyEN" maxlength="3000"></textarea>
+
+<button class="wide" onclick="publishNews()" data-ru="Опубликовать новость" data-en="Publish News">Опубликовать новость</button>
+<p class="notice" id="publishMessage"></p>
+<button class="lang" onclick="logout()" data-ru="Выйти" data-en="Log out">Выйти</button>
+</div>
+</div>
+
+<footer>© 2026 DRIBLING RP · ALL RIGHTS RESERVED</footer>
+
+<script>
+let language="ru";
+
+function changeLang(){
+ language=language==="ru"?"en":"ru";
+ document.querySelectorAll("[data-ru]").forEach(el=>{
+ el.textContent=el.getAttribute("data-"+language);
+ });
+ document.querySelector(".lang").textContent=language==="ru"?"RU / EN":"EN / RU";
+}
+
+document.getElementById("loginForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ document.getElementById("loginMessage").textContent=
+ language==="ru"?"Система авторизации ещё не подключена.":"Authentication is not connected yet.";
+});
+
+function publishNews(){
+ document.getElementById("publishMessage").textContent=
+ language==="ru"?"Сначала необходимо подключить защищённый сервер.":"A secure backend must be connected first.";
+}
+
+function logout(){
+ document.getElementById("dashboard").hidden=true;
+ document.getElementById("loginBox").hidden=false;
+}
+</script>
+</body>
+</html>
